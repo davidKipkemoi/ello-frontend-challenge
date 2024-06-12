@@ -4,7 +4,8 @@ import BookSearch from './components/BookSearch';
 import ReadingList from './components/ReadingList';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
-import './index.css'
+import './index.css';
+
 // Create an instance of ApolloClient
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql', // GraphQL server URI
@@ -32,39 +33,50 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <div className=""
-    
-      >
+      <div className="">
         <div
-        style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1551449896-66e638cbda3d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1551449896-66e638cbda3d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
         >
-        <Header/>
-        <Homepage/>
+          <Header />
+          <Homepage />
         </div>
-        <div className='relative rounded-3xl h-screen justify-center'>
-  <div className='absolute inset-0 rounded-3xl'
-    style={{
-      backgroundImage: 'url("https://images.unsplash.com/photo-1605627079912-97c3810a11a4?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      zIndex: -1, // Ensure the background is behind other content
-    }}
-  />
-  <h1 className="text-white text-3xl font-bold text-center mt-10 pt-10">Book Search</h1>
 
-  {/* Render BookSearch component and pass addToReadingList function */}
-  <BookSearch addToReadingList={addToReadingList} />
-  <h1 className="text-white text-3xl font-bold mt-10 text-center">Reading List</h1>
+        <div className="relative rounded-3xl min-h-screen justify-center mt-5">
+          <div
+            className="absolute inset-0 rounded-3xl"
+            style={{
+              backgroundImage: 'url("https://images.unsplash.com/photo-1605627079912-97c3810a11a4?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              zIndex: -1, // Ensure the background is behind other content
+              minHeight: '100vh',
+              backgroundAttachment: 'fixed',
+            }}
+          />
+          <h1 className="text-white text-3xl font-bold text-center pt-10">
+            <div className="inline-block">
+              Book Search
+              <span className="border-b-4 border-white dark:border-white mt-1 block w-12"></span>
+            </div>
+          </h1>
 
-  {/* Render ReadingList component and pass readingList and removeFromReadingList function */}
-  <ReadingList readingList={readingList} removeFromReadingList={removeFromReadingList} />
-</div>
+          {/* Render BookSearch component and pass addToReadingList function */}
+          <BookSearch addToReadingList={addToReadingList} />
 
-        
+          <h1 className="text-white text-3xl font-bold text-center pt-10">
+            <div className="inline-block">
+              Reading List
+              <span className="border-b-4 border-white dark:border-white mt-1 block w-12"></span>
+            </div>
+          </h1>
+
+          {/* Render ReadingList component and pass readingList and removeFromReadingList function */}
+          <ReadingList readingList={readingList} removeFromReadingList={removeFromReadingList} />
+        </div>
       </div>
     </ApolloProvider>
   );

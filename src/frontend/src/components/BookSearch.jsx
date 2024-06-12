@@ -59,8 +59,8 @@ function SearchBar({ addToReadingList }) {
 
   // Render the SearchBar component
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', color:'white' }}>
-      <Paper elevation={10} style={{ padding: '10px', marginTop: '10px', fontFamily: 'Inter', flex: '0 1 50%', borderRadius: '30px', backgroundColor: 'transparent', text:'white' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', color: 'white' }}>
+      <Paper elevation={10} style={{ padding: '10px', marginTop: '10px', fontFamily: 'Inter', flex: '0 1 50%', borderRadius: '30px', backgroundColor: 'transparent' }}>
         <TextField
           label="Search for a book..."
           fullWidth
@@ -72,11 +72,35 @@ function SearchBar({ addToReadingList }) {
                 <SearchIcon style={{ color: '#54CCCC' }} />
               </InputAdornment>
             ),
-            style: { backgroundColor: 'transparent', borderRadius: '20px', paddingRight: '10px' }
+            style: { 
+              backgroundColor: 'transparent', 
+              borderRadius: '20px', 
+              paddingRight: '10px', 
+              color: 'white' // Change text color to white
+            },
+            inputProps: {
+              style: { color: 'white' } // Ensure input text color is white
+            }
           }}
           InputLabelProps={{
             shrink: true,
             style: { color: '#54CCCC' }
+          }}
+          sx={{
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#54CCCC' // Default border color
+              },
+              '&:hover fieldset': {
+                borderColor: 'white' // Hover border color
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#54CCCC' // Focused border color
+              }
+            },
+            '& .MuiInputBase-input': {
+              color: 'white' // Ensure input text color is white
+            }
           }}
         />
         {/* If search term is entered and results should be shown, display the filtered book list */}
@@ -87,7 +111,13 @@ function SearchBar({ addToReadingList }) {
                 <ListItemAvatar>
                   <Avatar alt={book.title} src={`http://localhost:4000${book.coverPhotoURL}`} />
                 </ListItemAvatar>
-                <ListItemText primary={book.title} secondary={`Author: ${book.author}`} className="text-cyan-800" />
+                <ListItemText 
+                    primary={book.title} 
+                    secondary={`Author: ${book.author}`} 
+                    primaryTypographyProps={{ style: { color: '#54CCCC' } }} // Set title text color to white
+                    secondaryTypographyProps={{ style: { color: 'white' } }} // Set author text color to white
+                />
+
                 {/* Add a button to add the book to the reading list */}
                 <Button
                   variant="contained"
@@ -95,7 +125,7 @@ function SearchBar({ addToReadingList }) {
                     addToReadingList(book);
                     setShowResults(false);
                   }}
-                  style={{ backgroundColor: '#5ACCCC', color: 'white' }}
+                  style={{ backgroundColor: '#54CCCC', color: 'white' }}
                 >
                   Add to Reading List
                 </Button>
