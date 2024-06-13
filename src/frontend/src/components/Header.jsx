@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Button, Box, Link } from '@mui/material';
-import logo from '../assets/ello-logo-turquoise-removebg-preview.png'; // Assuming you have a logo with a transparent background
+import logo from '../assets/ello-logo-turquoise.png'; // Assuming you have a logo with a transparent background
 
 const Header = () => {
   const [isClicked, setIsClicked] = useState(false);
