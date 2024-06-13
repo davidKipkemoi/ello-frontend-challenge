@@ -107,9 +107,11 @@ function SearchBar({ addToReadingList }) {
         {searchTerm && showResults && (
           <List ref={resultsRef} className="flex flex-col items-start">
             {filteredBooks.map(book => (
-              <ListItem key={book.title} className="text-left">
+              <ListItem key={`${book.title}-${book.author}`} className="text-left">
                 <ListItemAvatar>
-                  <Avatar alt={book.title} src={`http://localhost:4000${book.coverPhotoURL}`} />
+                <Avatar alt={book.title} src={`http://localhost:4000/images${book.coverPhotoURL}`} />
+
+
                 </ListItemAvatar>
                 <ListItemText 
                     primary={book.title} 

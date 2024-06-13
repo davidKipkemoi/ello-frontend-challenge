@@ -2,25 +2,25 @@
   {
     'title': 'Curious Princess and the Enchanted Garden',
     'author': 'Reese Smith',
-    'coverPhotoURL': 'assets/image2.webp',
+    'coverPhotoURL': '/image3.webp',
     'readingLevel': 'H'
   },
   {
     'title': 'Clever Monster on the Wonder Island',
     'author': 'Jordan Jones',
-    'coverPhotoURL': 'assets/image10.webp',
+    'coverPhotoURL': '/image10.webp',
     'readingLevel': 'I'
   },
   {
     'title': 'Happy Knight and the Magic Spell',
     'author': 'Quinn Brown',
-    'coverPhotoURL': 'assets/image10.webp',
+    'coverPhotoURL': '/image10.webp',
     'readingLevel': 'I'
   },
   {
     'title': 'Happy Dragon and the Magic Spell',
     'author': 'Alex Jones',
-    'coverPhotoURL': 'assets/image6.webp',
+    'coverPhotoURL': '/image6.webp',
     'readingLevel': 'A'
   },
   {
