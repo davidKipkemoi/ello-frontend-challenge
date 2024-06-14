@@ -1,11 +1,6 @@
 {
-    "name": "ello-challenge",
-    "version": "1.0.0",
-    "scripts": {
-    "start": "cd frontend && npm install && npm start",
-      "build": "cd frontend && npm run build",
-      "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-      "backend-start": "cd backend && npm start"
-    }
-  }
-  
+  "name": "ello-challenge",
+  "version": "1.0.0",
+  "scripts": {
+"start": "cd frontend && npm install && npm run build && cd ../backend && npm start"  }
+}
