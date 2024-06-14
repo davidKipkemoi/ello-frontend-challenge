@@ -2,7 +2,8 @@
     "name": "ello-challenge",
     "version": "1.0.0",
     "scripts": {
-      "start": "cd frontend && npx vite build && cd ../backend && npm start"
+      "start": "cd frontend && npm run build && cd ../backend && npm start",
+      "build": "cd frontend && npm run build"
     }
   }
   
