@@ -13,6 +13,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use('/images', express.static(path.join(__dirname, '../frontend/src/assets')));
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 const root = resolvers
 app.get('/', (req, res) => {
