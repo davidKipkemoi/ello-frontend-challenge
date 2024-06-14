@@ -1,0 +1,26 @@
+{
+    "builds": [
+      {
+        "src": "src/frontend/src/**/*",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      },
+      {
+        "src": "src/backend/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/graphql",
+        "dest": "/src/backend/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/src/frontend/build/index.html"
+      }
+    ]
+  }
+  
