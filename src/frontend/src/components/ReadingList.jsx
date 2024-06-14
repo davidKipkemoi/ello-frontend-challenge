@@ -8,7 +8,7 @@ function ReadingList({ readingList, removeFromReadingList }) {
           <CardMedia
             component="img"
             alt={book.title}
-            image={`http://localhost:4000/images${book.coverPhotoURL}`}
+            image={`https://ello-frontend-challenge-d8h8.onrender.com/images${book.coverPhotoURL}`}
             style={{ width: '100%', height: '200px', objectFit: 'cover' }}
           />
           <CardContent>

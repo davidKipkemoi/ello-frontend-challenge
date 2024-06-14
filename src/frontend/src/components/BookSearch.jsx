@@ -109,7 +109,7 @@ function SearchBar({ addToReadingList }) {
             {filteredBooks.map(book => (
               <ListItem key={`${book.title}-${book.author}`} className="text-left">
                 <ListItemAvatar>
-                <Avatar alt={book.title} src={`http://localhost:4000/images${book.coverPhotoURL}`} />
+                <Avatar alt={book.title} src={`https://ello-frontend-challenge-d8h8.onrender.com/images${book.coverPhotoURL}`} />
 
 
                 </ListItemAvatar>

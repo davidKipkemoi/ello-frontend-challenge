@@ -8,7 +8,7 @@ import './index.css';
 
 // Create an instance of ApolloClient
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql', // GraphQL server URI
+  uri: 'https://ello-frontend-challenge-d8h8.onrender.com/graphql', // GraphQL server URI
   cache: new InMemoryCache() // In-memory cache for Apollo Client
 });
 
