@@ -16,9 +16,14 @@ function ReadingList({ readingList, removeFromReadingList }) {
             <Typography variant="subtitle1" color="textSecondary">
               {book.author}
             </Typography>
-            <Button variant="contained" color="secondary" onClick={() => removeFromReadingList(book.title)}>
+            <Button 
+              variant="contained" 
+              style={{ backgroundColor: '#4AA088', color: '#fff' }} // Change background and text color
+              onClick={() => removeFromReadingList(book.title)}
+            >
               Remove
             </Button>
+
           </CardContent>
         </Card>
       ))}
