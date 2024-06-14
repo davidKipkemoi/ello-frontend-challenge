@@ -1,0 +1,24 @@
+# Ello Project
+Overview
+Ello Project is a full-stack web application built for Ello's frontend challenge. It consists of a frontend client built with React.js and a backend server built with Express.js. The application allows teachers to add and view books. It is a teacher facing UI project.
+
+# Features
+Add a new book
+View a list of books
+Delete a book
+
+# Technologies Used
+Frontend:
+React.js
+Apollo Client for GraphQL requests
+MUI and Tailwind CSS for styling
+
+# Backend:
+Node.js
+Express.js
+GraphQL for API queries and mutations
+
+# Getting Started
+Prerequisites:
+Node.js installed on your machine
+NPM or Yarn package manager
