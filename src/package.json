@@ -1,0 +1,8 @@
+{
+    "name": "ello-challenge",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "cd src/frontend && npm run build && cd ../backend && npm start"
+    }
+  }
+  
